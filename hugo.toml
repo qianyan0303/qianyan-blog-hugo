@@ -1,0 +1,57 @@
+baseURL = 'https://qianyan-blog.github.io/'
+languageCode = 'zh-cn'
+title = '千岩的AI喵能芝士店'
+theme = 'stack'
+
+# 启用搜索功能
+[params.search]
+enable = true
+
+# 主题配置
+[params]
+mainSections = ['post']
+featuredImageField = 'image'
+rssFullContent = true
+favicon = '/favicon.ico'
+
+# 作者信息
+[params.sidebar.avatar]
+enabled = true
+local = true
+src = "img/avatar.png"
+
+[params.sidebar]
+emoji = "🧀"
+subtitle = "AI & 喵能 & 芝士"
+
+# 菜单配置
+[[menu.main]]
+identifier = "home"
+name = "首页"
+url = "/"
+weight = -100
+pre = "home"
+
+[[menu.main]]
+identifier = "about"
+name = "关于"
+url = "/about"
+weight = -90
+pre = "user"
+
+[[menu.main]]
+identifier = "search"
+name = "搜索"
+url = "/search"
+weight = -80
+pre = "search"
+
+# 社交链接
+[[params.social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/qianyan-blog"
+
+[params.footer]
+since = 2024
+customText = "千岩的AI喵能芝士店 - 用AI烤制最美味的芝士"

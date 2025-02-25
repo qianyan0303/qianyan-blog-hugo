@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:12609/tags/ai/</loc>
+    <lastmod>2024-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:12609/categories/</loc>
+    <lastmod>2024-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:12609/post/</loc>
+    <lastmod>2024-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:12609/tags/</loc>
+    <lastmod>2024-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:12609/about/</loc>
+    <lastmod>2024-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:12609/</loc>
+    <lastmod>2024-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:12609/categories/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2024-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:12609/tags/%E5%96%B5%E8%83%BD/</loc>
+    <lastmod>2024-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:12609/post/welcome/</loc>
+    <lastmod>2024-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:12609/tags/%E8%8A%9D%E5%A3%AB/</loc>
+    <lastmod>2024-02-25T00:00:00+00:00</lastmod>
+  </url>
+</urlset>
