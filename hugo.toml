@@ -22,7 +22,7 @@ src = "/img/avatar.png"
 
 [params.sidebar]
 emoji = "🧀"
-subtitle = "AI & 喵能 & 芝士"
+subtitle = "AIGC玩家 x 10倍编程 x 猫猫"
 
 # 菜单配置
 [[menu.main]]
@@ -40,10 +40,24 @@ weight = -90
 pre = "user"
 
 [[menu.main]]
+identifier = "category"
+name = "分类"
+url = "/categories"
+weight = -80
+pre = "hash"
+
+[[menu.main]]
+identifier = "tag"
+name = "标签"
+url = "/tags"
+weight = -80
+pre = "tag"
+
+[[menu.main]]
 identifier = "search"
 name = "搜索"
 url = "/search"
-weight = -80
+weight = -70
 pre = "search"
 
 # 社交链接

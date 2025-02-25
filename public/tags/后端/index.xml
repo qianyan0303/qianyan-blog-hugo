@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>后端 on 千岩的AI喵能芝士店</title>
+        <link>http://localhost:11591/tags/%E5%90%8E%E7%AB%AF/</link>
+        <description>Recent content in 后端 on 千岩的AI喵能芝士店</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0800</lastBuildDate><atom:link href="http://localhost:11591/tags/%E5%90%8E%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>通过Cursor提效：独立完成前后端功能模块的全流程案例</title>
+        <link>http://localhost:11591/post/cursorfullstackdev/</link>
+        <pubDate>Wed, 26 Feb 2025 00:00:00 +0800</pubDate>
+        
+        <guid>http://localhost:11591/post/cursorfullstackdev/</guid>
+        <description>&lt;img src="https://cdn.keihong.tech/img/20250226004629351.png" alt="Featured image of post 通过Cursor提效：独立完成前后端功能模块的全流程案例" /&gt;&lt;h2 id=&#34;引言&#34;&gt;引言
+&lt;/h2&gt;&lt;p&gt;在当今软件开发环境中，全栈开发者常常需要同时处理前端和后端任务，而在有限的时间内高效完成功能模块开发成为了一项挑战。本文将通过一个完整的案例，展示如何借助Cursor这款AI编程工具，在Vue前端和SpringBoot后端的全栈开发中实现显著的效率提升。&lt;/p&gt;
+&lt;p&gt;这不仅仅是一篇工具使用指南，更是一次实战经历的分享。我将带你经历从需求分析到最终实现的全过程，并在每个环节介绍Cursor如何帮助我们克服各种开发难题。&lt;/p&gt;
+&lt;h2 id=&#34;项目背景与需求&#34;&gt;项目背景与需求
+&lt;/h2&gt;&lt;h3 id=&#34;项目概述&#34;&gt;项目概述
+&lt;/h3&gt;&lt;p&gt;本案例中，我们需要为一个企业内部系统添加一个&amp;quot;文件批量处理&amp;quot;功能模块。该模块需要实现以下核心功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;前端：提供拖拽上传区域，支持文件批量选择、预览、状态显示&lt;/li&gt;
+&lt;li&gt;后端：接收文件，进行格式验证、内容解析、数据处理，并返回处理结果&lt;/li&gt;
+&lt;li&gt;数据库：存储处理记录与结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;技术栈&#34;&gt;技术栈
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;前端：Vue 3 + Element Plus + Axios&lt;/li&gt;
+&lt;li&gt;后端：SpringBoot 2.7 + MyBatis-Plus&lt;/li&gt;
+&lt;li&gt;数据库：MySQL 8.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;开发全流程-cursor-提效实战&#34;&gt;开发全流程 Cursor 提效实战
+&lt;/h2&gt;&lt;h3 id=&#34;1-需求分析与技术方案设计&#34;&gt;1. 需求分析与技术方案设计
+&lt;/h3&gt;&lt;p&gt;在这个阶段，我们需要深入理解需求并确定技术实现方案。传统方式下，我们可能需要通过查阅文档和多次讨论来确定最佳实践。&lt;/p&gt;
+&lt;h4 id=&#34;cursor提效技巧方案生成与比较&#34;&gt;Cursor提效技巧：方案生成与比较
+&lt;/h4&gt;&lt;p&gt;与其花大量时间搜索不同的实现方案，我使用Cursor直接生成和比较技术方案：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打开Cursor，在命令面板中键入：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;为Vue 3实现一个高性能的文件批量上传组件，需要考虑大文件处理、上传进度显示和断点续传功能。请提供2-3种可行的技术方案并比较其优缺点。
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cursor提供了三种方案：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于Element Plus Upload组件的封装方案&lt;/li&gt;
+&lt;li&gt;使用原生File API + axios实现的自定义方案&lt;/li&gt;
+&lt;li&gt;集成第三方库如uppy.js的方案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;通过AI分析，我快速确定了使用Element Plus Upload组件基础上进行二次封装的方案，因为它平衡了开发效率和功能需求。&lt;/p&gt;
+&lt;h3 id=&#34;2-前端组件开发&#34;&gt;2. 前端组件开发
+&lt;/h3&gt;&lt;h4 id=&#34;cursor提效技巧代码框架生成&#34;&gt;Cursor提效技巧：代码框架生成
+&lt;/h4&gt;&lt;p&gt;首先，通过Cursor快速生成组件框架：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;创建新的.vue文件后，向Cursor描述：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;创建一个Vue 3文件批量上传组件，使用Element Plus的Upload组件，支持拖拽上传、文件列表显示、上传进度条、文件预览和删除功能。使用Composition API风格。
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cursor立即生成了一个包含必要结构的Vue组件，包括模板、样式和逻辑部分，让我避免了手动搭建框架的繁琐工作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;cursor提效技巧交互式代码完善&#34;&gt;Cursor提效技巧：交互式代码完善
+&lt;/h4&gt;&lt;p&gt;生成基础框架后，我需要实现上传状态管理的逻辑。通过与Cursor的交互式对话，我能快速完善代码：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;向Cursor询问：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;如何优化组件中的上传状态管理？我需要处理上传中、成功、失败等状态，并在界面上反映这些状态。
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cursor不仅提供了状态管理的代码实现，还解释了每部分的作用和最佳实践，这让我能更深入地理解代码，而不是简单复制。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-后端api设计与实现&#34;&gt;3. 后端API设计与实现
+&lt;/h3&gt;&lt;p&gt;传统上，设计REST API是一个需要仔细规划的过程。&lt;/p&gt;
+&lt;h4 id=&#34;cursor提效技巧api接口设计辅助&#34;&gt;Cursor提效技巧：API接口设计辅助
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;向Cursor提问：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;为文件批量上传和处理功能设计SpringBoot RESTful API接口，需要考虑大文件上传、文件验证、异步处理等因素。
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cursor不仅提供了API端点设计建议，还包含了参数设计、响应格式和状态码使用的最佳实践。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;cursor提效技巧复杂业务逻辑实现&#34;&gt;Cursor提效技巧：复杂业务逻辑实现
+&lt;/h4&gt;&lt;p&gt;在实现文件处理的业务逻辑时，Cursor的帮助尤为明显：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;对于复杂的文件解析逻辑，我向Cursor描述：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;实现一个SpringBoot服务，能够解析Excel文件（支持.xlsx和.xls格式），提取数据并验证格式，然后批量插入数据库。需要处理可能的格式错误和数据验证失败情况。
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cursor生成了完整的代码实现，包括:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用Apache POI处理Excel文件&lt;/li&gt;
+&lt;li&gt;数据验证逻辑&lt;/li&gt;
+&lt;li&gt;异常处理机制&lt;/li&gt;
+&lt;li&gt;批量数据库操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;更令人印象深刻的是，当我遇到POI库处理大文件时内存问题，只需向Cursor描述问题，它立即提供了使用SXSSF API的优化方案。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;4-数据库设计与orm实现&#34;&gt;4. 数据库设计与ORM实现
+&lt;/h3&gt;&lt;h4 id=&#34;cursor提效技巧数据模型生成&#34;&gt;Cursor提效技巧：数据模型生成
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;向Cursor描述业务需求：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;为文件批量处理系统设计MySQL数据库表结构，需要记录上传的文件信息、处理状态、处理结果等。并生成对应的JPA实体类。
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cursor不仅提供了完整的SQL创建语句，还生成了对应的实体类、Repository接口和基础的CRUD操作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;5-前后端联调&#34;&gt;5. 前后端联调
+&lt;/h3&gt;&lt;p&gt;前后端联调通常是一个耗时且容易出错的过程。&lt;/p&gt;
+&lt;h4 id=&#34;cursor提效技巧接口调试与问题诊断&#34;&gt;Cursor提效技巧：接口调试与问题诊断
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;当遇到接口调用问题时，我将错误信息直接粘贴给Cursor：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;前端调用文件上传接口报错：415 Unsupported Media Type，这是我的请求代码和后端API定义。
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cursor分析了前后端代码，迅速定位了内容类型不匹配的问题，并提供了修复方案。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;6-单元测试编写&#34;&gt;6. 单元测试编写
+&lt;/h3&gt;&lt;h4 id=&#34;cursor提效技巧测试用例生成&#34;&gt;Cursor提效技巧：测试用例生成
+&lt;/h4&gt;&lt;p&gt;测试是保证代码质量的关键环节，但编写测试用例常常被视为枯燥工作。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;通过向Cursor描述：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;为SpringBoot文件上传处理服务编写单元测试和集成测试，需要测试文件验证、解析和数据处理功能。使用JUnit 5和Mockito框架。
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cursor生成了全面的测试用例，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;单元测试（模拟依赖）&lt;/li&gt;
+&lt;li&gt;集成测试（实际调用API）&lt;/li&gt;
+&lt;li&gt;边界条件测试&lt;/li&gt;
+&lt;li&gt;异常场景测试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;成果与收益&#34;&gt;成果与收益
+&lt;/h2&gt;&lt;p&gt;通过Cursor的辅助，这个功能模块的开发时间从预估的两周缩短到了5天，同时代码质量和可维护性都得到了保证。具体收益包括：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;开发速度提升约60%&lt;/strong&gt;：从需求分析到功能实现，每个环节都能利用Cursor加速&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代码质量提高&lt;/strong&gt;：生成的代码遵循最佳实践，包含完善的错误处理和注释&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;学习效果增强&lt;/strong&gt;：AI不只是提供代码，还解释实现原理，帮助提升技术能力&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;减少决策疲劳&lt;/strong&gt;：对于技术选型和架构决策，AI提供的分析减轻了决策压力&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;使用cursor的实用技巧总结&#34;&gt;使用Cursor的实用技巧总结
+&lt;/h2&gt;&lt;p&gt;通过这个案例，我总结了以下Cursor提效的关键技巧：&lt;/p&gt;
+&lt;h3 id=&#34;1-提问的艺术&#34;&gt;1. 提问的艺术
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;明确目标&lt;/strong&gt;：清晰描述你想要实现什么功能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;提供上下文&lt;/strong&gt;：包括技术栈、已有代码、约束条件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分步骤提问&lt;/strong&gt;：复杂问题拆分为小步骤，逐步解决&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-代码生成与优化&#34;&gt;2. 代码生成与优化
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;框架生成&lt;/strong&gt;：先生成基础框架，再逐步完善&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代码优化&lt;/strong&gt;：请求AI审查代码并提供优化建议&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;异常处理&lt;/strong&gt;：主动询问边界情况和异常处理方案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-学习与成长&#34;&gt;3. 学习与成长
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;理解而非复制&lt;/strong&gt;：询问生成代码的原理和设计思路&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;比较学习&lt;/strong&gt;：要求AI提供多种实现方式并比较优缺点&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最佳实践&lt;/strong&gt;：询问特定场景下的行业最佳实践&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;结语&#34;&gt;结语
+&lt;/h2&gt;&lt;p&gt;Cursor这类AI编程工具正在改变我们的开发方式，它不是简单的代码生成器，而是一个能够理解开发上下文、提供智能建议的助手。通过本文的实战案例，我希望展示了如何在实际项目中充分利用AI工具提升开发效率，同时不牺牲代码质量和个人成长。&lt;/p&gt;
+&lt;p&gt;对于开发者而言，掌握与AI工具协作的能力将成为未来的核心竞争力。这不是被AI取代，而是与AI共同进化，达到1+1&amp;gt;2的效果。在这个过程中，我们不仅提高了生产力，也拓展了技术视野。&lt;/p&gt;
+&lt;p&gt;你有使用Cursor或其他AI编程工具的经验吗？欢迎在评论区分享你的故事和技巧！&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

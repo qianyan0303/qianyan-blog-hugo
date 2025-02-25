@@ -1,16 +1,18 @@
 ---
 title: "欢迎来到千岩的AI喵能芝士店"
 description: "一个关于AI知识、猫咪的芝士味小店"
-date: 2024-02-25
-image: "/img/post-01.png"
+date: 2025-02-25
+image: "https://cdn.keihong.tech/img/20250225234748608.png"
 categories:
     - 博客
 tags:
     - AI
     - 喵能
     - 芝士
+weight: 1
 ---
 
+![poster](https://cdn.keihong.tech/img/20250225234748608.png)
 ## 欢迎光临！
 
 欢迎来到千岩的AI喵能芝士店！这是一个充满AI智慧、猫咪可爱和芝士味的神奇小店。在这里，我们将探讨：
@@ -29,7 +31,7 @@ tags:
 
 1. AI技术解析与应用分享
 2. 猫咪行为学和有趣故事
-3. 芝士制作技巧和品鉴心得
+3. 美食制作和品鉴心得
 4. 三者的奇妙结合与火花
 
 让我们一起开启这段充满智慧、温暖和美味的旅程吧！ 

@@ -1,0 +1,75 @@
+/* 自定义样式 */
+
+/* 设置全局背景图片 */
+body {
+    background-image: url('/img/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 增加内容区域透明度，以便背景图片更明显 */
+.main-container {
+    background-color: rgba(var(--card-background-color), 0.9);
+}
+
+/* 文章列表背景设置为白色 */
+.article-list article,
+.card {
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* 卡片悬停效果 */
+.article-list article:hover,
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 菜单栏字体颜色设置为白色 */
+#main-menu li a {
+    color: white !important;
+}
+
+/* 菜单栏活动项和悬停效果 */
+#main-menu li.current a,
+#main-menu li a:hover {
+    color: white !important;
+    text-decoration: underline;
+}
+
+/* 网站名称和描述设置为白色 */
+.site-name a,
+.site-description {
+    color: white !important;
+}
+
+/* 深色模式切换按钮设置为白色 */
+#dark-mode-toggle {
+    color: white !important;
+}
+
+/* 页脚文字设置为白色 - 完整版 */
+footer.site-footer,
+footer.site-footer .copyright,
+footer.site-footer .powerby,
+footer.site-footer section,
+footer.site-footer span,
+footer.site-footer p,
+footer.site-footer div {
+    color: white !important;
+}
+
+/* 页脚链接设置为白色 */
+footer.site-footer a,
+footer.site-footer a:hover,
+footer.site-footer a:visited {
+    color: white !important;
+}
+
+/* 强制覆盖可能的内联样式 */
+footer.site-footer * {
+    color: white !important;
+} 
