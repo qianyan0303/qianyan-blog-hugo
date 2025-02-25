@@ -18,7 +18,7 @@ favicon = '/favicon.ico'
 [params.sidebar.avatar]
 enabled = true
 local = true
-src = "img/avatar.png"
+src = "/img/avatar.png"
 
 [params.sidebar]
 emoji = "🧀"
